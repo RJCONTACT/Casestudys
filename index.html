@@ -186,32 +186,37 @@
         </section>
         <section>
                  <div class="metrics">
-                <div class="metric-card">
                 <h2>Key Terms and Their Relationships</h2>
+                <div class="metric-card">
                   <h3>AMSL (Above Mean Sea Level)</h3>
                   <p>
                     This is the altitude of an object or location measured relative to the average sea level.
                     It is the standard reference for aviation and is used for charting airspace and setting altimeters.
                   </p>
-            
+                </din>
+                <div class="metric-card">
                   <h3>Ground Elevation</h3>
                   <p>
                     This is the elevation of the terrain at a specific point, also measured relative to mean sea level.
                     Ground elevation is typically obtained from Digital Elevation Model (DEM) data and represents the actual height of the land.
                   </p>
-            
+                </div>
+                <div class="metric-card">
                   <h3>Waypoint</h3>
                   <p>
                     A waypoint is a designated location or marker along a flight path.
                     In our context, each waypoint has an associated altitude (usually given in AMSL) that indicates where the drone or aircraft is intended to be.
                   </p>
-            
+                </div>
+                <div class="metric-card">
                   <h3>AGL (Above Ground Level)</h3>
                   <p>
                     AGL is the altitude measured above the ground directly beneath an object.
                     It is calculated by subtracting the ground elevation (AMSL) from the object's altitude (AMSL).
                     In the case of waypoints, this relationship is expressed as:
                   </p>
+                </div>
+                <div class="metric-card">
                   <p><strong>AGL = Waypoint AMSL – Ground Elevation</strong></p>
                   <p>
                     This relationship is critical for ensuring safe flight paths. If the AGL at any waypoint reaches 0,
