@@ -299,7 +299,114 @@
 
                 <div class="iteration-card">
                     <h3>Iteration 2: Added AGL Visualization</h3>
-                                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="white"/>
+  
+  <!-- Grid lines (subtle) -->
+  <g stroke="#333333" stroke-width="1">
+    <line x1="50" y1="50" x2="50" y2="450"/>
+    <line x1="50" y1="450" x2="750" y2="450"/>
+  </g>
+  
+  <!-- AGL Shaded Area -->
+  <path
+    d="M100,250 L200,200 L300,150 L400,170 L500,230 L600,270 
+       L600,360 L500,340 L400,320 L300,310 L200,330 L100,350 Z"
+    fill="#4444ff"
+    fill-opacity="0.3"
+  />
+  
+  <!-- Ground AMSL line -->
+  <path
+    d="M100,350 L200,330 L300,310 L400,320 L500,340 L600,360"
+    fill="none"
+    stroke="#00ff00"
+    stroke-width="4"
+  />
+  
+  <!-- Waypoint AMSL line -->
+  <path
+    d="M100,250 L200,200 L300,150 L400,170 L500,230 L600,270"
+    fill="none"
+    stroke="red"
+    stroke-width="4"
+  />
+  
+  <!-- Data points Ground AMSL -->
+  <g fill="#00ff00">
+    <circle cx="100" cy="350" r="6"/>
+    <circle cx="200" cy="330" r="6"/>
+    <circle cx="300" cy="310" r="6"/>
+    <circle cx="400" cy="320" r="6"/>
+    <circle cx="500" cy="340" r="6"/>
+    <circle cx="600" cy="360" r="6"/>
+  </g>
+  
+  <!-- Data points Waypoint AMSL -->
+  <g fill="red">
+    <circle cx="100" cy="250" r="6"/>
+    <circle cx="200" cy="200" r="6"/>
+    <circle cx="300" cy="150" r="6"/>
+    <circle cx="400" cy="170" r="6"/>
+    <circle cx="500" cy="230" r="6"/>
+    <circle cx="600" cy="270" r="6"/>
+  </g>
+  
+  <!-- AGL Height Indicators -->
+  <g stroke="#4444ff" stroke-width="1" stroke-dasharray="5,5">
+    <line x1="300" y1="150" x2="300" y2="310"/>
+    <text x="315" y="230" fill="#4444ff" font-family="Arial" font-size="14">AGL</text>
+  </g>
+  
+  <!-- Labels -->
+  <g fill="black" font-family="Arial" font-size="14">
+    <!-- Y-axis labels -->
+    <text x="10" y="450" text-anchor="start">3000</text>
+    <text x="10" y="350" text-anchor="start">4000</text>
+    <text x="10" y="250" text-anchor="start">5000</text>
+    <text x="10" y="150" text-anchor="start">6000</text>
+    <text x="10" y="50" text-anchor="start">7000</text>
+    
+    <!-- X-axis labels -->
+    <text x="100" y="480" text-anchor="middle">WP1</text>
+    <text x="200" y="480" text-anchor="middle">WP2</text>
+    <text x="300" y="480" text-anchor="middle">WP3</text>
+    <text x="400" y="480" text-anchor="middle">WP4</text>
+    <text x="500" y="480" text-anchor="middle">WP5</text>
+    <text x="600" y="480" text-anchor="middle">WP6</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="30" fill="black" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">
+    Altitude Profile with AGL
+  </text>
+  
+  <!-- Legend -->
+  <g transform="translate(650, 50)">
+    <rect width="120" height="90" fill="white" stroke="black" stroke-width="1"/>
+    <line x1="10" y1="20" x2="30" y2="20" stroke="red" stroke-width="4"/>
+    <text x="40" y="25" fill="black" font-family="Arial" font-size="12">Waypoint AMSL</text>
+    <line x1="10" y1="45" x2="30" y2="45" stroke="#00ff00" stroke-width="4"/>
+    <text x="40" y="50" fill="black" font-family="Arial" font-size="12">Ground AMSL</text>
+    <rect x="10" y="60" width="20" height="15" fill="#4444ff" fill-opacity="0.3"/>
+    <text x="40" y="72" fill="black" font-family="Arial" font-size="12">AGL</text>
+  </g>
+</svg>
+  
+                    <div class="feedback-card">
+                        <h4>User Feedback:</h4>
+                        <ul>
+                            <li>"Better visibility of height differences"</li>
+                            <li>"Need more precise measurements"</li>
+                            <li>"Dark background would be better for contrast"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="iteration-card">
+                    <h3>Iteration 3: Enhanced Readability</h3>
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
   <!-- Background -->
   <rect width="800" height="500" fill="black"/>
   
@@ -393,29 +500,6 @@
     <text x="40" y="72" fill="white" font-family="Arial" font-size="12">AGL</text>
   </g>
 </svg>
-                    <div class="feedback-card">
-                        <h4>User Feedback:</h4>
-                        <ul>
-                            <li>"Better visibility of height differences"</li>
-                            <li>"Need more precise measurements"</li>
-                            <li>"Dark background would be better for contrast"</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="iteration-card">
-                    <h3>Iteration 3: Enhanced Readability</h3>
-                    <svg viewBox="0 0 800 500">
-                        <!-- Added grid, labels, and dark theme -->
-                        <rect width="800" height="500" fill="black"/>
-                        <g stroke="#333333" stroke-width="1">
-                            <line x1="50" y1="50" x2="50" y2="450"/>
-                            <line x1="50" y1="450" x2="750" y2="450"/>
-                        </g>
-                        <path d="M100,250 L200,200 L300,150 L400,170 L500,230 L600,270 L600,360 L500,340 L400,320 L300,310 L200,330 L100,350 Z" fill="#4444ff" fill-opacity="0.3"/>
-                        <path d="M100,250 L200,200 L300,150 L400,170 L500,230 L600,270" fill="none" stroke="red" stroke-width="4"/>
-                        <path d="M100,350 L200,330 L300,310 L400,320 L500,340 L600,360" fill="none" stroke="#00ff00" stroke-width="4"/>
-                    </svg>
                     <div class="feedback-card">
                         <h4>User Feedback:</h4>
                         <ul>
